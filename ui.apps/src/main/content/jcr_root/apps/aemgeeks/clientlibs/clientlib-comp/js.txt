@@ -14,4 +14,9 @@
 # limitations under the License.
 ###############################################################################
 
-less/grid.less
+#base=js
+#jquery.easing.js
+#sb-admin-2.js
+#Chart.js
+#chart-area-demo.js
+#chart-pie-demo.js
