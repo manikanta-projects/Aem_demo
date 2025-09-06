@@ -1,1 +1,6 @@
 <h1 style="color:red"> Author Component </h1>
+<div data-sly-use.author="com.aemgeeks.core.models.Author">
+ <p style="color:red"> First Name : <b style="color:green">${author.firstName}</b></p>
+ <p style="color:red"> Last Name : <b style="color:green">${author.lastName}</b></p>
+ <p style="color:red"> Is Professor : <b style="color:green">${author.isProfessor}</b></p>
+</div>
