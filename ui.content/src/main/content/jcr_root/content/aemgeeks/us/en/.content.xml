@@ -88,4 +88,5 @@
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
     <home/>
+    <author/>
 </jcr:root>
