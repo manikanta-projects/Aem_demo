@@ -132,6 +132,78 @@
                             </columns>
                         </items>
                     </multifieldwithbean>
+                    <nastermultifield
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Nasted Multifield"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <bookdetailswithnastedmultifield
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Provide Book Details Publications"
+                                                fieldLabel="Book Details">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./bookdetailswithnastedmultifield">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <bookname
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Book Name"
+                                                            fieldLabel="Book Name"
+                                                            name="./bookname"/>
+                                                        <booksubject
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Book Subject"
+                                                            fieldLabel="Book Subject"
+                                                            name="./booksubject"/>
+                                                        <bookeditions
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Provide Book Editions"
+                                                            fieldLabel="Book Editions">
+                                                            <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                name="./bookeditions">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <bookedition
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                        fieldDescription="Provide Book Edition"
+                                                                        fieldLabel="Book Edition"
+                                                                        name="./bookedition"/>
+                                                                    <editiondate
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                                        fieldDescription="Provide Book Edition Date"
+                                                                        fieldLabel="Edition Date"
+                                                                        name="./editiondate"/>
+                                                                </items>
+                                                            </field>
+                                                        </bookeditions>
+                                                    </items>
+                                                </field>
+                                            </bookdetailswithnastedmultifield>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </nastermultifield>
                 </items>
             </tabs>
         </items>

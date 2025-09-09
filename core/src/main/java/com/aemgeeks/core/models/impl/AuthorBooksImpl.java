@@ -1,6 +1,7 @@
 package com.aemgeeks.core.models.impl;
 
 import com.aemgeeks.core.helper.MultifieldHelper;
+import com.aemgeeks.core.helper.NastedHelper;
 import com.aemgeeks.core.models.AuthorBooks;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -80,6 +81,31 @@ public class AuthorBooksImpl implements AuthorBooks {
             LOG.info("\n BEAN ERROR : {}",e.getMessage());
         }
         return bookDetailsBean;
+    }
+
+    @Override
+    public List<MultifieldHelper> getBookDetailsWithNastedMultifield() {
+        List<MultifieldHelper> bookDetailsNasted = new ArrayList<>();
+        try {
+            Resource bookDetailNasted = resource.getChild("bookdetailswithnastedmultifield");
+            if (bookDetailNasted!=null){
+                for (Resource bookNasted : bookDetailNasted.getChildren()){
+                    MultifieldHelper multifieldHelper = new MultifieldHelper(bookNasted);
+                    if (bookNasted.hasChildren()){
+                        List<NastedHelper> bookNastedList = new ArrayList<>();
+                        Resource nastedResource = bookNasted.getChild("bookeditions");
+                        for(Resource nasted : nastedResource.getChildren()){
+                              bookNastedList.add(new NastedHelper(nasted));
+                        }
+                        multifieldHelper.setBookEditions(bookNastedList);
+                    }
+                    bookDetailsNasted.add(multifieldHelper);
+                }
+            }
+        } catch (Exception e) {
+            LOG.info("\n Error While getting the Books With Nasted Multifield Helper : {}",e.getMessage());
+        }
+        return bookDetailsNasted;
     }
 
 }

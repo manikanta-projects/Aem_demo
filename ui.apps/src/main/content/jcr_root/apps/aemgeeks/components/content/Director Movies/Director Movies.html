@@ -1,0 +1,7 @@
+<div data-sly-use.movies="com.aemgeeks.core.models.DirectorMovies">
+    <h4 style="color:purple">Top Five <b> ${movies.directorName}</b> Movies </h4>
+    <div data-sly-list.item="${movies.directorMovies}">
+        <p style="color:red"> Movie ${itemList.count} : <b style="color:green"> ${item} </b></p>
+    </div>
+    <p style="color:red"> All Movies : <b style="color:green"> ${movies.directorMovies @ join =' , '}</b></p>
+</div>

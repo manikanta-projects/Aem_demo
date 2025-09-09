@@ -23,4 +23,16 @@
    <p style="color:red"> Published Date : <b style="color:green"> ${'MMM dd,yyyy' @ format=item.publishDate} </b> </p>
    <p style="color:red"> Published Copies : <b style="color:green"> ${item.copies} </b> </p>
 </div>
+
+ ================= 	Using Nasted Multifield  =======================
+<div data-sly-list="${books.bookDetailsWithNastedMultifield}">
+   ============== Book : ${itemList.count} ============
+   <p style="color:red"> Book Name : <b style="color:green"> ${item.bookName} </b> </p>
+   <p style="color:red"> Book Subject : <b style="color:green"> ${item.bookSubject} </b> </p>
+     <div data-sly-list.edition="${item.bookEditions}">
+         <p style="color:red"> Book Edition : <b style="color:green"> ${edition.bookEdition} </b> </p>
+         <p style="color:red"> Edition Date : <b style="color:green"> ${'MMM dd,yyyy' @ format=edition.editionDate} </b> </p>
+
+     </div>
+  </div>
 </div>

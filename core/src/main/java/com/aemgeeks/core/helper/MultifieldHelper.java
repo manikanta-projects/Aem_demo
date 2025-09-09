@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Date;
+import java.util.List;
 
 public class MultifieldHelper {
     private static final Logger LOG = LoggerFactory.getLogger(MultifieldHelper.class);
@@ -13,6 +14,7 @@ public class MultifieldHelper {
     private String bookSubject;
     private Date publishDate;
     private Integer copies;
+    private List<NastedHelper> bookEditions;
     public MultifieldHelper(Resource resource){
         try {
             if(StringUtils.isNotBlank(resource.getValueMap().get("bookname", String.class))){
@@ -46,5 +48,13 @@ public class MultifieldHelper {
 
     public Integer getCopies(){
         return copies;
+    }
+
+    public List<NastedHelper> getBookEditions(){
+        return bookEditions;
+    }
+
+    public void setBookEditions(List<NastedHelper> bookEditions){
+        this.bookEditions = bookEditions;
     }
 }
