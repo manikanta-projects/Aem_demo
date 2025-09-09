@@ -1,0 +1,38 @@
+<div data-sly-use.books="com.aemgeeks.core.models.AuthorBooks">
+ <h1 style="color:red"> <b> ${books.authorName} </b>  Books </h1>
+
+================== Multifield with Single Field =================
+<div data-sly-list.item="${books.authorBooks}">
+   ============== Book : ${itemList.count} ===========
+   <p style="color:red"> Book :<b style="color:green"> ${item} </b> </p>
+ </div>
+  <p style="color:red"> All Books : <b style="color:green"> ${books.authorBooks @ join=' , '}</b></p>
+
+================= Multifield With Map =======================
+<div data-sly-list.item="${books.bookDetailsWithMap}">
+   ============== Book : ${itemList.count} ============
+   <p style="color:red"> Book Name : <b style="color:green"> ${item.bookname} </b> </p>
+   <p style="color:red"> Book Subject : <b style="color:green"> ${item.booksubject} </b> </p>
+   <p style="color:red"> Publish Year : <b style="color:green"> ${item.publishyear} </b> </p>
+</div>
+
+================= Multifield With Bean =======================
+<div data-sly-list.item="${books.bookDetailsWithBean}">
+   ============== Book : ${itemList.count} ============
+   <p style="color:red"> Book Name : <b style="color:green"> ${item.bookName} </b> </p>
+   <p style="color:red"> Published Date : <b style="color:green"> ${'MMM dd,yyyy' @ format=item.publishDate} </b> </p>
+   <p style="color:red"> Published Copies : <b style="color:green"> ${item.copies} </b> </p>
+</div>
+
+ ================= 	Using Nasted Multifield  =======================
+<div data-sly-list="${books.bookDetailsWithNastedMultifield}">
+   ============== Book : ${itemList.count} ============
+   <p style="color:red"> Book Name : <b style="color:green"> ${item.bookName} </b> </p>
+   <p style="color:red"> Book Subject : <b style="color:green"> ${item.bookSubject} </b> </p>
+     <div data-sly-list.edition="${item.bookEditions}">
+         <p style="color:red"> Book Edition : <b style="color:green"> ${edition.bookEdition} </b> </p>
+         <p style="color:red"> Edition Date : <b style="color:green"> ${'MMM dd,yyyy' @ format=edition.editionDate} </b> </p>
+
+     </div>
+  </div>
+</div>
