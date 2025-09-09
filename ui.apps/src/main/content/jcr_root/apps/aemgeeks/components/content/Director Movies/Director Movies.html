@@ -12,4 +12,22 @@
       <p style="color:#f20530"> Movie Plot : <b style="color:#7d7a2a"> ${item.movieplot} </b></p>
       <p style="color:#f20530"> Released Year : <b style="color:#7d7a2a"> ${item.releasedyear} </b></p>
    </div>
+   <h5 style="color:#0cc4ed"><u>${movies.directorName} Movies Budget & Release</u></h5>
+   </br>
+   <div data-sly-list.item = "${movies.moviesDetailsBudget}">
+      <p style="color:#f20530"> Movie Name : <b style="color:#7d7a2a"> ${item.movieName} </b></p>
+      <p style="color:#f20530"> Released Date : <b style="color:#7d7a2a"> ${'MMM dd,yyy' @format = item.releaseDate} </b></p>
+      <p style="color:#f20530"> Movie Budget : <b style="color:#7d7a2a"> ${item.movieBudget} </b></p>
+   </div>
+   <h5 style="color:#f78f07"><u>Movies Sequel Details</u></h5>
+    </br>
+   <div data-sly-list.item = "${movies.moviesSequelDetails}">
+      <p style="color:#f20530"> Movie Name : <b style="color:#7d7a2a"> ${item.movieName} </b></p>
+      <p style="color:#f20530"> Movie Plot : <b style="color:#7d7a2a"> ${item.moviePlot} </b></p>
+         <div data-sly-list.sequel = "${item.movieSequels}">
+             <p style="color:#f20530"> Movie Title : <b style="color:#7d7a2a"> ${sequel.movieTitle} </b></p>
+             <p style="color:#f20530"> Released Time : <b style="color:#7d7a2a"> ${'MMM dd,yyy' @format = sequel.releaseTime} </b></p>
+
+        </div>
+   </div>
 </div>

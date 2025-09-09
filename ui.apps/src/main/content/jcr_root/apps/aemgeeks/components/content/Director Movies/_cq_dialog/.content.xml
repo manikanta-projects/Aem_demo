@@ -79,6 +79,130 @@
                             </columns>
                         </items>
                     </directormovies>
+                    <moviesbudget
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Movies Budget"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <moviesdetailsbudget
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Provide Director Movie Details"
+                                                fieldLabel="Movie Details">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./moviesdetailsbudget">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <moviename
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Movie Name"
+                                                            fieldLabel="Movie Name"
+                                                            name="./moviename"/>
+                                                        <moviereleasedate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                            fieldDescription="Provide Movie Released Date"
+                                                            fieldLabel="Released Date"
+                                                            name="./releasedate"/>
+                                                        <moviebudget
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                            fieldDescription="Provide Movie Budget"
+                                                            fieldLabel="Movie Budget"
+                                                            name="./moviebudget"/>
+                                                    </items>
+                                                </field>
+                                            </moviesdetailsbudget>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </moviesbudget>
+                    <moviesequels
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Movies Sequels"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <moviessequeldetails
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Provide Director Movie Details"
+                                                fieldLabel="Movie Details">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./moviessequeldetails">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <moviename
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Movie Name"
+                                                            fieldLabel="Movie Name"
+                                                            name="./moviename"/>
+                                                        <movieplot
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Movie Plot"
+                                                            fieldLabel="Movie Plot"
+                                                            name="./movieplot"/>
+                                                        <moviesequels
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Provide Movies Sequels Details"
+                                                            fieldLabel="Movie Sequels">
+                                                            <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                name="./moviesequels">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <movietitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldDescription="Provide Movie Sequel Title"
+                                                                        fieldLabel="Movie Title"
+                                                                        name="./movietitle"/>
+                                                                    <releasetime
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                                        fieldDescription="Provide Movie Sequel Release Time"
+                                                                        fieldLabel="Release Time"
+                                                                        name="./releasetime"/>
+                                                                </items>
+                                                            </field>
+                                                        </moviesequels>
+                                                    </items>
+                                                </field>
+                                            </moviessequeldetails>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </moviesequels>
                 </items>
             </tabs>
         </items>

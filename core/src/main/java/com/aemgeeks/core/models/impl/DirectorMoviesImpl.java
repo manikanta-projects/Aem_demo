@@ -1,5 +1,7 @@
 package com.aemgeeks.core.models.impl;
 
+import com.aemgeeks.core.helper.MultifieldHelper;
+import com.aemgeeks.core.helper.NastedHelper;
 import com.aemgeeks.core.models.DirectorMovies;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -61,5 +63,49 @@ public class DirectorMoviesImpl implements DirectorMovies {
         }
         LOG.info("\n SIZE : {}",moviesDetails.size());
         return moviesDetails;
+    }
+
+    @Override
+    public List<MultifieldHelper> getMoviesDetailsBudget() {
+        List<MultifieldHelper> moviesBudget = new ArrayList<>();
+        try {
+            Resource movieBudget = resource.getChild("moviesdetailsbudget");
+            if (movieBudget!=null){
+                for (Resource budget : movieBudget.getChildren()){
+                    LOG.info("\n Movie name : {}",budget.getValueMap().get("moviename",String.class));
+                    LOG.info("\n Movie Budget : {}",budget.getValueMap().get("moviebudget",Integer.class));
+                    moviesBudget.add(new MultifieldHelper(budget));
+                }
+            }
+        } catch (Exception e) {
+            LOG.info("\n Error While Getting Movie Budget Details : {}",e.getMessage());
+        }
+        LOG.info("\n MOVIES SIZE : {}",moviesBudget.size());
+        return moviesBudget;
+    }
+
+    @Override
+    public List<MultifieldHelper> getMoviesSequelDetails() {
+        List<MultifieldHelper> movieSequelDetails = new ArrayList<>();
+        try {
+            Resource movieSequels = resource.getChild("moviessequeldetails");
+            if (movieSequels!=null){
+                for (Resource movieSequel : movieSequels.getChildren()){
+                    MultifieldHelper multifieldHelper = new MultifieldHelper(movieSequel);
+                    if (movieSequel.hasChildren()){
+                        List<NastedHelper> movieSequelListDetails = new ArrayList<>();
+                        Resource movieSequelsList = movieSequel.getChild("moviesequels");
+                        for (Resource movieSequelDetail : movieSequelsList.getChildren()){
+                                  movieSequelListDetails.add(new NastedHelper(movieSequelDetail));
+                        }
+                        multifieldHelper.setMovieSequels(movieSequelListDetails);
+                    }
+                    movieSequelDetails.add(multifieldHelper);
+                }
+            }
+        } catch (Exception e) {
+            LOG.info("\n Error While Getting Movie Sequel Details : {}",e.getMessage());
+        }
+        return movieSequelDetails;
     }
 }
