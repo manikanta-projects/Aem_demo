@@ -41,6 +41,38 @@
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                     name="./directormovies"/>
                                             </directormovies>
+                                            <moviesdetails
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Provide Director Movie Details"
+                                                fieldLabel="Movie Details">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./moviesdetails">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <moviename
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Movie Name"
+                                                            fieldLabel="Movie Name"
+                                                            name="./moviename"/>
+                                                        <movieplot
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Movie Plot"
+                                                            fieldLabel="Movie Plot"
+                                                            name="./movieplot"/>
+                                                        <releasedyear
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Provide Released Year"
+                                                            fieldLabel="Released Year"
+                                                            name="./releasedyear"/>
+                                                    </items>
+                                                </field>
+                                            </moviesdetails>
                                         </items>
                                     </column>
                                 </items>

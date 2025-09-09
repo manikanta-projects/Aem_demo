@@ -1,7 +1,15 @@
 <div data-sly-use.movies="com.aemgeeks.core.models.DirectorMovies">
-    <h4 style="color:purple">Top Five <b> ${movies.directorName}</b> Movies </h4>
+    <h3 style="color:purple">Top Five <b> ${movies.directorName}</b> Movies </h3>
     <div data-sly-list.item="${movies.directorMovies}">
         <p style="color:red"> Movie ${itemList.count} : <b style="color:green"> ${item} </b></p>
     </div>
     <p style="color:red"> All Movies : <b style="color:green"> ${movies.directorMovies @ join =' , '}</b></p>
+</br>
+    <h5 style="color:#0e18e3"><u>${movies.directorName} Movies Details</u></h5>
+</br>
+   <div data-sly-list.item = "${movies.directorMoviesDetails}">
+      <p style="color:#f20530"> Movie Name : <b style="color:#7d7a2a"> ${item.moviename} </b></p>
+      <p style="color:#f20530"> Movie Plot : <b style="color:#7d7a2a"> ${item.movieplot} </b></p>
+      <p style="color:#f20530"> Released Year : <b style="color:#7d7a2a"> ${item.releasedyear} </b></p>
+   </div>
 </div>
