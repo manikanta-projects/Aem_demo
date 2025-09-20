@@ -24,7 +24,7 @@
    <div data-sly-list.item = "${movies.moviesSequelDetails}">
       <p style="color:#f20530"> Movie Name : <b style="color:#7d7a2a"> ${item.movieName} </b></p>
       <p style="color:#f20530"> Movie Plot : <b style="color:#7d7a2a"> ${item.moviePlot} </b></p>
-         <div data-sly-list.sequel = "${item.movieSequels}">
+         <div style="margin-left:80px" data-sly-list.sequel = "${item.movieSequels}">
              <p style="color:#f20530"> Movie Title : <b style="color:#7d7a2a"> ${sequel.movieTitle} </b></p>
              <p style="color:#f20530"> Released Time : <b style="color:#7d7a2a"> ${'MMM dd,yyy' @format = sequel.releaseTime} </b></p>
 

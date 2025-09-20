@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-09-18T12:43:12.165+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/aemgeeks/templates/geeks-general"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Author Bio"
+        sling:resourceType="aemgeeks/components/structure/home">
+        <parsys
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <author_books
+                jcr:created="{Date}2025-09-07T20:14:28.271+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-09-18T12:43:12.133+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemgeeks/components/content/Author Books"
+                authorname="Badiginjala Manikanta"
+                books="[The Jungle Book,The Lion King]">
+                <bookdetailswithmap jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="The Jungle Book"
+                        booksubject="The Jungle Book is a collection of fables by Rudyard Kipling, first published in 1894, about an Indian &quot;man-cub&quot; named Mowgli who is raised by wolves in the Indian jungle"
+                        publishyear="1894"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="The Lion King"
+                        booksubject="The Lion King refers to the popular Disney franchise, most notably the 1994 animated film and the 2019 photorealistic remake, both of which follow the story of Simba, a young lion who must reclaim his throne from his villainous uncle Scar after his father's death"
+                        publishyear="1994"/>
+                </bookdetailswithmap>
+                <bookdetailswithbean jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="The Avatar"
+                        copies="200"
+                        publishdate="{Date}2023-08-16T00:00:00.000+05:30"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Harry Porter"
+                        copies="500"
+                        publishdate="{Date}2024-11-06T00:00:00.000+05:30"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        bookname="The Conjuring"
+                        copies="750"
+                        publishdate="{Date}2025-09-05T00:00:00.000+05:30"/>
+                </bookdetailswithbean>
+                <bookdetailswithnastedmultifield jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="The Great Gatsby"
+                        booksubject="The Great Gatsby is a 1925 tragedy novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with Jay Gatsby, a mysterious millionaire obsessed with reuniting with his former lover, Daisy Buchanan.">
+                        <bookeditions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="1"
+                                editiondate="{Date}2023-04-04T00:00:00.000+05:30"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="2"
+                                editiondate="{Date}2024-11-13T00:00:00.000+05:30"/>
+                        </bookeditions>
+                    </item0>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Ninteen Eighty Four"
+                        booksubject="Nineteen Eighty-Four is a dystopian novel by the English writer George Orwell. It was published on 8 June 1949 by Secker &amp; Warburg as Orwell's ninth and final completed book.">
+                        <bookeditions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="1"
+                                editiondate="{Date}2022-03-15T00:00:00.000+05:30"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="2"
+                                editiondate="{Date}2025-01-08T00:00:00.000+05:30"/>
+                        </bookeditions>
+                    </item1>
+                </bookdetailswithnastedmultifield>
+            </author_books>
+        </parsys>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,14 @@
+<h1 style="color:red"> Multi Exporters </h1>
+<div data-sly-use.books ="com.aemgeeks.core.models.MultiExporter"/>
+   <p style="color:red"> Title : <b style="color:green">${books.title}</b></p>
+   <p style="color:red"> Description : <b style="color:green">${books.description}</b></p>
+   <p style="color:red"> Publish Date : <b style="color:green">${'MMM dd,yyyy' @format=books.publishDate}</b></p>
+
+            ================= USING MAP ========================
+
+     <div data-sly-list.item="${books.authorBooks}">
+
+            <p style="color:red"> Book ${itemList.count} : <b style="color:green">${item}</b></p>
+
+     </div>
+</div>

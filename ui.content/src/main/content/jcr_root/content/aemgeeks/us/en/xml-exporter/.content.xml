@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-09-20T16:32:40.298+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/aemgeeks/templates/geeks-general"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Xml Exporter"
+        sling:resourceType="aemgeeks/components/structure/home">
+        <parsys
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <xml_exporter
+                jcr:created="{Date}2025-09-20T16:29:51.930+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-09-20T16:32:40.294+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemgeeks/components/content/Xml Exporter"
+                authorbooks="[The Jungle Book,Mowgli,Tarzan,Martyn Mystery,Harry Porter]"
+                description="The Lion King&quot; refers to both the original 1994 animated film and the 2019 photorealistic computer-generated remake, both following the story of Simba, a young lion prince who must flee his home after his uncle Scar murders his father, Mufasa, only to return years later to reclaim his throne and take his place in the Circle of Life. The franchise also includes a popular Broadway musical, and a 2024 prequel film, Mufasa: The Lion King, which explores the backstory of the iconic character. "
+                publishdate="{Date}2025-01-22T00:00:00.000+05:30"
+                title="The Lion King"/>
+        </parsys>
+    </jcr:content>
+</jcr:root>

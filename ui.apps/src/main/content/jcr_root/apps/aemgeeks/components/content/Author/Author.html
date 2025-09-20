@@ -7,4 +7,16 @@
  <p style="color:red"> Request Attribute : <b style="color:green">${author.reqAttribute}</b></p>
  <p style="color:red"> Home Page Name : <b style="color:green">${author.homePageName}</b></p>
  <p style="color:red"> Last ModifiedBy : <b style="color:green">${author.lastModifiedBy}</b></p>
+ <p style="color:red"> Books : <b style="color:green"> ${author.authorBooks @join = ' , '} </b> </p>
+
+            ===== USING MAP =====
+
+     <div data-sly-list.item="${author.bookDetailsWithMap}">
+            -------Book : ${itemList.count} -------
+
+            <p style="color:red"> Book Name : <b style="color:green">${item.bookname}</b></p>
+            <p style="color:red"> Book Subject : <b style="color:green">${item.booksubject}</b></p>
+            <p style="color:red"> Publish Year : <b style="color:green">${item.publishyear}</b></p>
+     </div>
+
 </div>

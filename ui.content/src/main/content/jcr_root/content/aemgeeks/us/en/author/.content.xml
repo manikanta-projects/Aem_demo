@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-09-06T11:40:47.529+05:30"
+        cq:lastModified="{Date}2025-09-12T20:01:04.040+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/apps/aemgeeks/templates/geeks-content"
         jcr:primaryType="cq:PageContent"
@@ -14,13 +14,32 @@
             <author
                 jcr:created="{Date}2025-09-06T11:34:03.911+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2025-09-06T11:40:47.527+05:30"
+                jcr:lastModified="{Date}2025-09-12T20:01:04.033+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemgeeks/components/content/Author"
-                fname="Badiginjala"
+                authorbooks="[Kanyasulakam,Maha Prasthanam,Tulasi Dalam,Amaravati kalalu,Vennello Adapilla]"
+                fname="UMMADISETTY"
                 isProfessor="true"
-                lname="Manikanta"/>
+                lname="LOKESH">
+                <bookdetailswithmap jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Java"
+                        booksubject="Java is a high-level, general-purpose, memory-safe, object-oriented programming language. It is intended to let programmers write once, run anywhere, meaning that compiled Java code can run on all platforms that support Java without the need to recompile."
+                        publishyear="1992"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Python"
+                        booksubject="Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically type-checked and garbage-collected."
+                        publishyear="2000"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Data Science"
+                        booksubject="Data science is the interdisciplinary study and application of various methods, algorithms, and systems to extract knowledge and insights from data for various purposes, such as making informed decisions and creating predictive models"
+                        publishyear="2004"/>
+                </bookdetailswithmap>
+            </author>
         </parsys>
     </jcr:content>
 </jcr:root>

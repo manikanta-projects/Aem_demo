@@ -89,4 +89,8 @@
     </jcr:content>
     <home/>
     <author/>
+    <author-bio/>
+    <directors-history/>
+    <xml-exporter/>
+    <multi-exporters/>
 </jcr:root>

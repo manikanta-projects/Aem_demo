@@ -1,5 +1,8 @@
 package com.aemgeeks.core.models;
 
+import java.util.List;
+import java.util.Map;
+
 public interface Author {
 
     String getFirstName();
@@ -9,4 +12,6 @@ public interface Author {
     String getReqAttribute();
     String getHomePageName();
     String getLastModifiedBy();
+    List<String> getAuthorBooks();
+    List<Map<String,String>> getBookDetailsWithMap();
 }
