@@ -1,0 +1,13 @@
+<h1 style="color:red"> Service Demo </h1>
+<div data-sly-use.service="com.aemgeeks.core.models.ServiceDemo">
+
+   ======================= USING ITERATOR =====================
+   <div data-sly-list.item="${service.pagesList}">
+     <p style="color:red"> Page - ${itemList.count} : <b style="color:green"> ${item.title} </b></p>
+   </div>
+
+     ======================= USING LIST =====================
+   <div data-sly-list.item="${service.pagesTitleList}">
+     <p style="color:red"> Page - ${itemList.count} : <b style="color:green"> ${item} </b></p>
+    </div>
+</div>
