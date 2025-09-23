@@ -93,4 +93,7 @@
     <directors-history/>
     <xml-exporter/>
     <multi-exporters/>
+    <loggers-demo/>
+    <service-demo/>
+    <multiservice-demo/>
 </jcr:root>
