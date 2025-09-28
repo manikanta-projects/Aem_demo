@@ -96,4 +96,5 @@
     <loggers-demo/>
     <service-demo/>
     <multiservice-demo/>
+    <osgiconfig-demo/>
 </jcr:root>

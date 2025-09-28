@@ -1,0 +1,27 @@
+<h1 style="color:red"> Osgi Config Demo </h1>
+<div data-sly-use.osgi="com.aemgeeks.core.models.OsgiConfigDemo"></div>
+  <div style="color:red"> Service Name : <b style="color:green"> ${osgi.serviceName} </b></div>
+  <div style="color:red"> Service Count : <b style="color:green"> ${osgi.serviceCount} </b></div>
+  <div style="color:red"> Live Data : <b style="color:green"> ${osgi.liveData} </b></div>
+  <div style="color:red"> Run Modes : <b style="color:green"> ${osgi.runModes} </b></div>
+  <div style="color:red"> Countries :  </div>
+  <ul data-sly-list="${osgi.countries}">
+      <li style="color:green"> ${item} </li>
+  </ul><br/>
+
+  ================ OSGI CONFIG SEPERATE FILE ==================
+
+  <div style="color:red"> Service ID : <b style="color:green"> ${osgi.serviceID} </b></div>
+  <div style="color:red"> Service Name : <b style="color:green"> ${osgi.moduleServiceName} </b></div>
+  <div style="color:red"> Service Url : <b style="color:green"> ${osgi.serviceUrl} </b></div> <br/>
+
+  ================ OSGI FACTORY CONFIGURATIONS ================
+
+  <div data-sly-list="${osgi.allOsgiConfigs}">
+
+          =========== Config : ${itemList.count} ============
+
+     <div style="color:red"> Config ID : <b style="color:green"> ${item.configID} </b></div>
+     <div style="color:red"> Config Name : <b style="color:green"> ${item.configName} </b></div>
+     <div style="color:red"> Config Url : <b style="color:green"> ${item.configUrl} </b></div>
+  </div>
